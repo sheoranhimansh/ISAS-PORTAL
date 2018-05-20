@@ -1,0 +1,23 @@
+<form action="{{ formAction }}" method="post">
+Semester:<br>
+               <select name="sem1">
+                {% for x in users %}
+                <option value="{{x.sem_ids}}">{{ x.sem_ids }}</option>
+                {% endfor %}
+            </select>
+<br>
+<br>
+
+
+ Course:<br>
+               <select name="cour1">
+                {% for x in users %}
+                <option value="{{x.course_ids}}">{{ x.course_ids }}</option>
+                {% endfor %}
+            </select>
+<br>
+<br>
+<input type="submit" value="Submit">
+<br>
+<br>
+    <a href="/login">LOGOUT</a>

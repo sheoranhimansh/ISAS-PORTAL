@@ -1,0 +1,75 @@
+<html>
+<form action="http://0.0.0.0:8080/admin" method="post">
+    <div class="panel-heading">
+    <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Semester -->
+    <h1>Add Sem</h1>
+            Semester:</br>
+            <input type = "number" name ="sem1" min="9" max="15"><br>
+            <br>
+            <input class="butt" type = "submit" name = "button" value = "Add Semester"><br>
+    </div>
+<br>
+<br>
+<div class="panel-heading">
+            <h1>Click here to add course to semester</h1>
+               <br/>
+               Semester:<br>
+               <select name="sem2">
+                {% for x in semesters %}
+                <option value="{{x.name}}">{{ x.name }}</option>
+                {% endfor %}
+            </select>
+             <!--  <input type="text" name="sem2"><br> -->
+             </br>
+               Course:<br>
+               <select name="cour2">
+                {% for x in courses %}
+                <option value="{{x.name}}">{{ x.name }}</option>
+                {% endfor %}
+            </select>
+            <!--   <input type="text" name="cour2"><br> --> 
+            </br>
+               Faculty:<br>
+               <select name="faculty2">
+                {% for x in faculty %}
+                <option value="{{x.name}}">{{ x.name }}</option>
+                {% endfor %}
+            </select>
+            </br>
+            <br>
+               <!-- <input type="text" name="faculty2"><br> -->
+               <input class="butt" type="submit" name="button" value="Add Course"><br>
+        </div>
+<br>
+<br>
+<div class="panel-heading">
+            <h1>Click here to add grade</h1>
+               <br/>
+               Semester:<br>
+               <select name="sem3">
+                {% for x in semesters %}
+                <option value="{{x.name}}">{{ x.name }}</option>
+                {% endfor %}
+                </select><br>
+              <!-- <input type="text" name="sem3"><br> -->
+               Course:<br>
+               <select name="cour3">
+                {% for x in courses %}
+                <option value="{{x.name}}">{{ x.name }}</option>
+                {% endfor %}
+                </select>
+                <br>
+               <!--<input type="text" name="cour3"><br>--> 
+               <br>
+               <input class="butt" type="submit" name="button" value="Change Credentials"><br>
+               <br>
+               <!-- <input class="butt" type="submit" name="button" value="Attendance"><br> -->
+        </div>
+<br>
+<br>
+
+
+              <a href="/login">LOGOUT</a>
+
+</form>
+</html>

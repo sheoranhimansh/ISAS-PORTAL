@@ -1,0 +1,36 @@
+<form action="{{ formAction }}" method="post">
+ <div class="panel panel-default">
+    <style type="text/css">
+    table, th, td {
+    border: 1px solid black;
+}
+</style>
+{% for i in students %}  
+<h1>Semester </h1>
+<table style="width:100%">
+  <tr>
+    <th>Course</th> 
+    <th>Mid1</th>
+    <th>Mid2</th>
+    <th>Endsem</th>
+    <th>Attendance</th>
+  </tr>
+ {% for j in i %}
+  <tr>
+  <td>{{j.course_ids}}</td>
+  <td>{{j.mid1}}</td>
+  <td>{{j.mid2}}</td>
+  <td>{{j.endsem}}</td>
+  <td>{{j.attendance}}</td>
+  </tr>
+  {% endfor %}
+  
+  </table>
+
+  {% endfor %}
+  <br>
+  <br>
+   <a href="/login">LOGOUT</a>
+
+  </div>
+</form>
